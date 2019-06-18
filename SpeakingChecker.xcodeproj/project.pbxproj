@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FCC94AFF83FD1EF5B922AAD /* Pods_SpeakingChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8EA6E6EDA461FB0CBEAF2 /* Pods_SpeakingChecker.framework */; };
+		A2BFA64922B8C818008FAFE3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A2BFA64822B8C818008FAFE3 /* README.md */; };
 		A2E9E7AB22B88CBA0030EC38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E9E7AA22B88CBA0030EC38 /* AppDelegate.swift */; };
 		A2E9E7AD22B88CBA0030EC38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E9E7AC22B88CBA0030EC38 /* ViewController.swift */; };
 		A2E9E7B022B88CBA0030EC38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E9E7AE22B88CBA0030EC38 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		61A8EA6E6EDA461FB0CBEAF2 /* Pods_SpeakingChecker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakingChecker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB2197E54FE662653CE859B /* Pods-SpeakingChecker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingChecker.debug.xcconfig"; path = "Target Support Files/Pods-SpeakingChecker/Pods-SpeakingChecker.debug.xcconfig"; sourceTree = "<group>"; };
+		A2BFA64822B8C818008FAFE3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A2E9E7A722B88CBA0030EC38 /* SpeakingChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E9E7AA22B88CBA0030EC38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E9E7AC22B88CBA0030EC38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,13 +48,13 @@
 				6AB2197E54FE662653CE859B /* Pods-SpeakingChecker.debug.xcconfig */,
 				E1B7D9559B53E4C24E4B8B0A /* Pods-SpeakingChecker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		A2E9E79E22B88CBA0030EC38 = {
 			isa = PBXGroup;
 			children = (
+				A2BFA64822B8C818008FAFE3 /* README.md */,
 				A2E9E7A922B88CBA0030EC38 /* SpeakingChecker */,
 				A2E9E7A822B88CBA0030EC38 /* Products */,
 				2C30AC8CDBBA920A7692A63F /* Pods */,
@@ -151,6 +153,7 @@
 			files = (
 				A2E9E7B522B88CBB0030EC38 /* LaunchScreen.storyboard in Resources */,
 				A2E9E7B222B88CBB0030EC38 /* Assets.xcassets in Resources */,
+				A2BFA64922B8C818008FAFE3 /* README.md in Resources */,
 				A2E9E7B022B88CBA0030EC38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
