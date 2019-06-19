@@ -14,6 +14,7 @@
 		A2E9E7B022B88CBA0030EC38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E9E7AE22B88CBA0030EC38 /* Main.storyboard */; };
 		A2E9E7B222B88CBB0030EC38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E9E7B122B88CBB0030EC38 /* Assets.xcassets */; };
 		A2E9E7B522B88CBB0030EC38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E9E7B322B88CBB0030EC38 /* LaunchScreen.storyboard */; };
+		A2EADFCF22BA9E4A00AAE760 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = A2EADFCE22BA9E4A00AAE760 /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A2E9E7B122B88CBB0030EC38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2E9E7B422B88CBB0030EC38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2E9E7B622B88CBC0030EC38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2EADFCE22BA9E4A00AAE760 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		E1B7D9559B53E4C24E4B8B0A /* Pods-SpeakingChecker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeakingChecker.release.xcconfig"; path = "Target Support Files/Pods-SpeakingChecker/Pods-SpeakingChecker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BFA64822B8C818008FAFE3 /* README.md */,
+				A2EADFCE22BA9E4A00AAE760 /* demo.gif */,
 				A2E9E7A922B88CBA0030EC38 /* SpeakingChecker */,
 				A2E9E7A822B88CBA0030EC38 /* Products */,
 				2C30AC8CDBBA920A7692A63F /* Pods */,
@@ -153,6 +156,7 @@
 			files = (
 				A2E9E7B522B88CBB0030EC38 /* LaunchScreen.storyboard in Resources */,
 				A2E9E7B222B88CBB0030EC38 /* Assets.xcassets in Resources */,
+				A2EADFCF22BA9E4A00AAE760 /* demo.gif in Resources */,
 				A2BFA64922B8C818008FAFE3 /* README.md in Resources */,
 				A2E9E7B022B88CBA0030EC38 /* Main.storyboard in Resources */,
 			);
