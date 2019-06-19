@@ -8,16 +8,18 @@
 
 import UIKit
 import Speech
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var startButton: UIButton!
     
     private var speechRecognizer: SFSpeechRecognizer!
     private var recognitionTask: SFSpeechRecognitionTask!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest!
     private let audioEngine = AVAudioEngine()
-    
+    private var talker = AVSpeechSynthesizer()
+
     enum Mode {
         case none
         case recording
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
             case .authorized:
                 break
             default:
-                self.button.isEnabled = false
+                self.startButton.isEnabled = false
             }
         }
         setMode(.none)
@@ -55,22 +57,26 @@ class ViewController: UIViewController {
     }
     
     private func startRecording() throws {
+        // タスクがあれば終了
         if let recTask = recognitionTask {
             recTask.cancel()
             self.recognitionTask = nil
         }
         
+        // リクエスト作成
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         guard let recRequest = recognitionRequest else {
             fatalError("Unable to created a SFSpeechAudioBufferRecognitionRequest object")
         }
         
+        // リクエストをタスクにセット
         recRequest.shouldReportPartialResults = true
         recognitionTask = speechRecognizer.recognitionTask(with: recRequest) { result, error in
             var isFinal = false
             if let result = result {
                 if (self.mode == .recording) {
                     self.label.text = result.bestTranscription.formattedString
+                    // TODO:単語判定
                 }
                 isFinal = result.isFinal
             }
@@ -102,11 +108,17 @@ class ViewController: UIViewController {
         self.mode = mode
         switch mode {
         case .none:
-            button.setTitle("開始", for: .normal)
-            button.backgroundColor = UIColor.blue
+            startButton.setTitle("開始", for: .normal)
+            startButton.backgroundColor = UIColor.blue
         case .recording:
-            button.setTitle("停止", for: .normal)
-            button.backgroundColor = UIColor.red
+            startButton.setTitle("停止", for: .normal)
+            startButton.backgroundColor = UIColor.red
         }
+    }
+    
+    @IBAction func onSpeak(_ sender: Any) {
+        let utterance = AVSpeechUtterance(string: "hello")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en")
+        self.talker.speak(utterance)
     }
 }
