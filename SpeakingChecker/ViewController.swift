@@ -19,10 +19,12 @@ class ViewController: UIViewController {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest!
     private let audioEngine = AVAudioEngine()
     private var talker = AVSpeechSynthesizer()
-
+    
+    // 録音モード
     enum Mode {
         case none
         case recording
+        case stopping
     }
     private var mode = Mode.none
     
@@ -52,7 +54,9 @@ class ViewController: UIViewController {
             }
         case .recording:
             stopRecording()
-            setMode(.none)
+            setMode(.stopping)
+        default:
+            break
         }
     }
     
@@ -74,9 +78,16 @@ class ViewController: UIViewController {
         recognitionTask = speechRecognizer.recognitionTask(with: recRequest) { result, error in
             var isFinal = false
             if let result = result {
+                print(result.isFinal.description + ":" + result.bestTranscription.formattedString)
                 if (self.mode == .recording) {
-                    self.label.text = result.bestTranscription.formattedString
+                    let str = result.bestTranscription.formattedString
+                    self.label.text = str
+
                     // TODO:単語判定
+                    if str.uppercased() == "HELLO" {
+                        self.label.textColor = UIColor.red
+                    }
+                    self.stopRecording()
                 }
                 isFinal = result.isFinal
             }
@@ -86,6 +97,8 @@ class ViewController: UIViewController {
                 
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
+                
+                self.setMode(.none)
             }
         }
         
@@ -111,14 +124,18 @@ class ViewController: UIViewController {
             startButton.setTitle("開始", for: .normal)
             startButton.backgroundColor = UIColor.blue
         case .recording:
-            startButton.setTitle("停止", for: .normal)
+            label.text = ""
+            label.textColor = UIColor.black
+            startButton.setTitle("録音中", for: .normal)
             startButton.backgroundColor = UIColor.red
+        default:
+            break
         }
     }
     
     @IBAction func onSpeak(_ sender: Any) {
         let utterance = AVSpeechUtterance(string: "hello")
         utterance.voice = AVSpeechSynthesisVoice(language: "en")
-        self.talker.speak(utterance)
+        talker.speak(utterance)
     }
 }

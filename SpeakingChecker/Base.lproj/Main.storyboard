@@ -18,48 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXC-1w-XMJ">
-                                <rect key="frame" x="0.0" y="144" width="414" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syt-nY-3gf">
+                                <rect key="frame" x="0.0" y="144" width="414" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Bd9-Aj-oLv"/>
+                                    <constraint firstAttribute="height" constant="100" id="Gfx-JT-PvE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXC-1w-XMJ">
+                                <rect key="frame" x="0.0" y="244" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="XFR-TW-5XG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nwR-h7-1Pe">
-                                <rect key="frame" x="0.0" y="294" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="344" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eV-I0-NQ1">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="100"/>
                                         <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                                        <state key="normal" title="Start"/>
+                                        <state key="normal" title="開始"/>
                                         <connections>
                                             <action selector="onStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NH7-k6-Y7a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwH-xf-4OZ">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="50"/>
-                                        <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="207" y="0.0" width="207" height="100"/>
+                                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="お手本"/>
                                         <connections>
                                             <action selector="onSpeak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ksJ-yf-2sn"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qcR-Hb-2ZS"/>
+                                    <constraint firstAttribute="height" constant="100" id="bpu-a7-vrU"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nwR-h7-1Pe" firstAttribute="top" secondItem="YXC-1w-XMJ" secondAttribute="bottom" id="APd-RT-u5w"/>
-                            <constraint firstItem="YXC-1w-XMJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BRt-rL-0e9"/>
-                            <constraint firstItem="nwR-h7-1Pe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HCo-J5-pop"/>
-                            <constraint firstItem="YXC-1w-XMJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WCq-Er-jG3"/>
-                            <constraint firstItem="YXC-1w-XMJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Y8T-iX-OId"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nwR-h7-1Pe" secondAttribute="trailing" id="lZD-bW-RvJ"/>
+                            <constraint firstItem="YXC-1w-XMJ" firstAttribute="top" secondItem="Syt-nY-3gf" secondAttribute="bottom" id="Jwr-6g-8lE"/>
+                            <constraint firstItem="YXC-1w-XMJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nmd-de-yND"/>
+                            <constraint firstItem="YXC-1w-XMJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qig-eO-N67"/>
+                            <constraint firstItem="nwR-h7-1Pe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VXv-Xg-8lB"/>
+                            <constraint firstItem="Syt-nY-3gf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eap-Ak-f1b"/>
+                            <constraint firstItem="Syt-nY-3gf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="kUi-JH-0ej"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nwR-h7-1Pe" secondAttribute="trailing" id="nMv-Ah-FJi"/>
+                            <constraint firstItem="nwR-h7-1Pe" firstAttribute="top" secondItem="YXC-1w-XMJ" secondAttribute="bottom" id="qBH-8l-5St"/>
+                            <constraint firstItem="Syt-nY-3gf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qRf-pY-Tjl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
