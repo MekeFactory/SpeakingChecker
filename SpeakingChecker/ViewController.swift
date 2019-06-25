@@ -77,6 +77,13 @@ class ViewController: UIViewController {
     }
     
     private func startRecording() throws {
+        // AVAudioEngineによる録音中でも再生音量が小さくならない
+        let audioSession = AVAudioSession.sharedInstance()
+        try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
+        try audioSession.setMode(AVAudioSession.Mode.default)
+        try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        try audioSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
+
         // タスクがあれば終了
         if let recTask = recognitionTask {
             recTask.cancel()
